@@ -2,6 +2,7 @@ package a413.dev.gatogit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -42,5 +43,63 @@ public class MainActivity extends AppCompatActivity {
         }
         message.setText("Turno de X");
         counter = 0;
+    }
+    public void reset(View v)
+    {
+        masterReset();
+    }
+
+    public int Victory()
+    {
+        if(logicMatriz[0][0]==logicMatriz[1][1] && logicMatriz[2][2]==logicMatriz[0][0] && logicMatriz[0][0]!=2)
+        {
+            return logicMatriz[0][0];
+        }
+        else if(logicMatriz[0][2]==logicMatriz[1][1] && logicMatriz[2][0]==logicMatriz[0][2] && logicMatriz[0][2]!=2)
+        {
+            return logicMatriz[0][2];
+        }
+        for(int i=0; i<3; i++)
+        {
+            if(logicMatriz[i][0]==logicMatriz[i][1] && logicMatriz[i][2]==logicMatriz[i][0] && logicMatriz[i][0]!=2)
+            {
+                return logicMatriz[i][0];
+            }
+            else if(logicMatriz[0][i]==logicMatriz[1][i] && logicMatriz[2][i]==logicMatriz[0][i] && logicMatriz[0][i]!=2)
+            {
+                return logicMatriz[0][i];
+            }
+        }
+        return 2;
+    }
+    public void checkVictory()
+    {
+        if(counter%2==1)
+        {
+            message.setText("Turno de X");
+        }
+        else
+        {
+            message.setText("Turno de O");
+        }
+        if(counter==8)
+        {
+            message.setText("Empate, presione reset.");
+        }
+        if(Victory()!=2)
+        {
+            if(Victory()==0)
+            {
+                message.setText("GANÓ X, presione reset.");
+            }
+            else
+            {
+                message.setText("GANÓ O, presione reset.");
+            }
+        }
+        else
+        {
+            counter++;
+        }
     }
 }
