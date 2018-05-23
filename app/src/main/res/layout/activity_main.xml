@@ -23,46 +23,64 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:onClick="onClick0X0"
+            android:textSize="75dp"
+            android:textAlignment="center"
             android:id="@+id/button0X0"/>
         <Button
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:textSize="75dp"
             android:onClick="onClick0X1"
+            android:textAlignment="center"
             android:id="@+id/button0X1"/>
         <Button
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:textSize="75dp"
+            android:textAlignment="center"
             android:onClick="onClick0X2"
             android:id="@+id/button0X2"/>
         <Button
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:textSize="75dp"
+            android:textAlignment="center"
             android:onClick="onClick1X0"
             android:id="@+id/button1X0"/>
         <Button
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:textSize="75dp"
+            android:textAlignment="center"
             android:onClick="onClick1X1"
             android:id="@+id/button1X1"/>
         <Button
             android:layout_width="120dp"
+            android:textSize="75dp"
             android:layout_height="120dp"
+            android:textAlignment="center"
             android:onClick="onClick1X2"
             android:id="@+id/button1X2"/>
         <Button
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:textAlignment="center"
+            android:textSize="75dp"
             android:onClick="onClick2X0"
             android:id="@+id/button2X0"/>
         <Button
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:onClick="onClick2X1"
+            android:textSize="75dp"
+            android:textAlignment="center"
             android:id="@+id/button2X1"/>
         <Button
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:onClick="onClick2X2"
+            android:textAlignment="center"
+            android:textSize="75dp"
             android:id="@+id/button2X2"/>
     </GridLayout>
     <LinearLayout
@@ -74,6 +92,7 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:textSize="20dp"
+            android:onClick="reset"
             android:text="RESET"
             android:id="@+id/resetButton"
             android:layout_marginLeft="50dp"/>
@@ -81,6 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Turno de X..."
+            android:layout_marginTop="10dp"
             android:textSize="20dp"
             android:id="@+id/notificationText"
             android:layout_marginLeft="30dp"/>
