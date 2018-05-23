@@ -102,4 +102,58 @@ public class MainActivity extends AppCompatActivity {
             counter++;
         }
     }
+
+    public void onClick0X0(View v)
+    {
+        Turno(0,0);
+    }
+    public void onClick0X1(View v)
+    {
+        Turno(0,1);
+    }
+
+    public void onClick0X2(View v)
+    {
+        Turno(0,2);
+    }
+    public void onClick1X0(View v)
+    {
+        Turno(1,0);
+    }
+    public void onClick1X1(View v)
+    {
+        Turno(1,1);
+    }
+    public void onClick1X2(View v)
+    {
+        Turno(1,2);
+    }
+    public void onClick2X0(View v)
+    {
+        Turno(2,0);
+    }
+    public void onClick2X1(View v)
+    {
+        Turno(2,1);
+    }
+    public void onClick2X2(View v)
+    {
+        Turno(2,2);
+    }
+    public void Turno(int i, int j)
+    {
+        if(logicMatriz[i][j]==2 && Victory()==2)
+        {
+            logicMatriz[i][j] = counter%2;
+            if(counter%2==0)
+            {
+                matriz[i][j].setText("X");
+            }
+            else
+            {
+                matriz[i][j].setText("O");
+            }
+            checkVictory();
+        }
+    }
 }
